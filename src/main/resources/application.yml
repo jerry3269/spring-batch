@@ -22,5 +22,43 @@ spring:
 
   sql.init.mode: always
 
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  sql:
+    init:
+      encoding: utf-8
+
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/batch;MODE=mysql;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate.ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    defer-datasource-initialization: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+
+
+
+
+
+
 
 

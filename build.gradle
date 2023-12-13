@@ -32,6 +32,9 @@ dependencies {
     // mysql
     runtimeOnly 'com.mysql:mysql-connector-j'
 
+    //h2
+    runtimeOnly 'com.h2database:h2'
+
     // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -52,6 +55,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     testImplementation 'org.apache.commons:commons-lang3:3.12.0'
+
 }
 
 tasks.named('test') {
