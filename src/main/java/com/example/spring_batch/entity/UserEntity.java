@@ -15,7 +15,7 @@ import java.util.Map;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @ToString
-@Table(name = "user")
+@Table(name = "member")
 @Entity
 public class UserEntity extends BaseEntity {
     @Id
